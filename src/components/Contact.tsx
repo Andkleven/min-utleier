@@ -76,7 +76,7 @@ export default function Contact({ setCheckbox, checkbox, useScroll }) {
             </div>
             <hr className="w-100 bg-secondary" />
             <Row>
-              <Col>
+              <Col xs={12} sm={6}>
                 <Form.Group controlId="name">
                   <Form.Label>Navn</Form.Label>
                   <Form.Control placeholder="Skriv navnet ditt her" />
