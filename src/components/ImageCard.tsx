@@ -38,7 +38,7 @@ export default function ImageCard({
           }}
         >
           <Button
-            style={{ width: "100%" }}
+            style={{ width: "100%", marginTop: 10 }}
             onClick={() => {
               setCheckbox((prevState) => {
                 return { ...prevState, [carToRent.title]: true };
