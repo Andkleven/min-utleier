@@ -39,7 +39,7 @@ export default function Contact({ setCheckbox, checkbox, useScroll }) {
           data.leie[name] = true;
         }
       });
-      const res = await fetch(`${process.env.FRONTEND_URL}/api`, {
+      const res = await fetch(`https://min-utleier.vercel.app/api`, {
         body: JSON.stringify(data),
         headers: {
           Accept: "application/json",
