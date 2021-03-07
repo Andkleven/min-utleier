@@ -14,7 +14,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     const data = JSON.parse(req.body);
     const msg = {
-      to: "amkleven@gmail.com",
+      to: "post@min-eiendom.no",
       from: "anders@baremathiesen.net",
       subject: "lei",
       html: `
