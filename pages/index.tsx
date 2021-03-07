@@ -20,6 +20,7 @@ export default function Home() {
         .map((_, i) => elRefs[i] || createRef())
     );
   }, [arrLength]);
+  const navbarHeight = 80;
   return (
     <div
       style={{
@@ -27,8 +28,68 @@ export default function Home() {
       }}
     >
       <div
+        className="px-4 shadow bg-darker border-bottom border-top border-dark"
+        style={{
+          height: navbarHeight,
+          position: "fixed",
+          zIndex: 999,
+          background: "white",
+          width: "100%",
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Container>
+          <Row>
+            <Col
+              style={{
+                whiteSpace: "nowrap",
+              }}
+              xs={6}
+            >
+              <Button
+                variant="outline-primary"
+                href="mailto:amkleven@gmail.com?subject=Min Utleier"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <MailIcon />
+                <div className="ml-2" />
+                Email
+              </Button>
+            </Col>
+            <Col
+              style={{
+                whiteSpace: "nowrap",
+              }}
+              xs={6}
+            >
+              <Button
+                variant="outline-primary"
+                href="tel:96042477"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <PhoneCall />
+                <div className="ml-2" />
+                Ring
+              </Button>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      <div
         className="text-light"
         style={{
+          paddingTop: navbarHeight,
           minHeight: 175,
           height: "100%",
           maxHeight: 600,
@@ -51,14 +112,7 @@ export default function Home() {
             objectFit="cover"
             quality={100}
           />
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              paddingBottom: 20,
-            }}
-          >
+          <Container>
             <h1
               style={{
                 fontWeight: 900,
@@ -72,139 +126,34 @@ export default function Home() {
               <span className="text-light">MIN</span>
               <span className="text-primary">UTLEIER</span>
             </h1>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              flexDirection: "column",
-            }}
-          >
-            <Container
+            <h3
               style={{
-                background: "rgba(35, 39, 43, 0.8)",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
+                fontWeight: 800,
+                fontSize: "calc(2vw + 5px)",
+                textTransform: "uppercase",
+                textShadow: "0px 2px 1em rgba(0, 0, 0, 0.5)",
+                fontFamily: "Akaya Telivigala",
+                position: "relative",
+                top: 5,
               }}
             >
-              <Card
-                style={{
-                  background: "rgba(35, 39, 43, 0.8)",
-                  padding: "20px 0",
-                }}
-              >
-                <Row
-                  xs={6}
-                  md={6}
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                  className="mb-4"
-                >
-                  {carsToRent.map((carToRent: CarToRent, index: number) => {
-                    return (
-                      <Col
-                        xs={12}
-                        sm={4}
-                        md={3}
-                        className="mb-4"
-                        key={carToRent.title}
-                        style={{
-                          whiteSpace: "nowrap",
-                          textShadow: "0px 2px 1em rgba(0, 0, 0, 1)",
-                          fontSize: "calc(1vw + 20px)",
-                          display: "flex",
-                          justifyContent: "center",
-                          alignItems: "center",
-                          margin: "0 20px",
-                        }}
-                      >
-                        <Button
-                          variant="outline-primary"
-                          onClick={() =>
-                            elRefs[index].current?.scrollIntoView()
-                          }
-                        >
-                          {carToRent.title}
-                        </Button>
-                      </Col>
-                    );
-                  })}
-                </Row>
-                <Row className="mb-4">
-                  <Col
-                    style={{
-                      whiteSpace: "nowrap",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      marginBottom: 20,
-                    }}
-                  >
-                    <Button
-                      variant="outline-primary"
-                      size="lg"
-                      href="mailto:amkleven@gmail.com?subject=Min Utleier"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                      }}
-                    >
-                      <MailIcon />
-                      <div className="ml-2" />
-                      Send email
-                    </Button>
-                  </Col>
-                  <Col
-                    style={{
-                      whiteSpace: "nowrap",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      marginBottom: 20,
-                    }}
-                  >
-                    <Button
-                      variant="outline-primary"
-                      href="tel:96042477"
-                      size="lg"
-                      style={{ display: "flex", alignItems: "center" }}
-                    >
-                      <PhoneCall />
-                      <div className="ml-2" />
-                      Ring nå
-                    </Button>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col>
-                    <h5>Vi holder til i ÅS</h5>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      color: "rgb(255, 255, 255)",
-                    }}
-                  >
-                    <h5>
-                      Trenger du hjelp til å utføre arbeid besøk{" "}
-                      <a href="https://www.mineiendomservice.no/">
-                        MinEiendomservice
-                      </a>
-                    </h5>
-                  </Col>
-                </Row>
-              </Card>
-            </Container>
-          </div>
+              Vi holder til i ås
+            </h3>
+            <h5
+              style={{
+                fontWeight: 800,
+                fontSize: "calc(1vw + 5px)",
+                textTransform: "uppercase",
+                textShadow: "0px 2px 1em rgba(0, 0, 0, 0.5)",
+                fontFamily: "Akaya Telivigala",
+                position: "relative",
+                top: 5,
+              }}
+            >
+              Trenger du hjelp til å utføre arbeid besøk{" "}
+              <a href="https://www.mineiendomservice.no/">MinEiendomservice</a>
+            </h5>
+          </Container>
           <div className="mt-5" />
           <Container>
             <Row>

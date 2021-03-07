@@ -9,7 +9,7 @@ export default function ImageCard({
   elRefs,
 }) {
   return (
-    <Col xs={12} md={6} xl={4} className="mb-4">
+    <Col xs={12} md={6} xl={4} className="mb-4" ref={elRefs[index]}>
       {/* <div className="text-dark"> */}
       <Card.Img src={carToRent.imageUrl} />
       <div>
@@ -19,7 +19,6 @@ export default function ImageCard({
             background: "rgba(35, 39, 43, 0.8)",
             padding: 10,
           }}
-          ref={elRefs[index]}
         >
           <Card.Title
             style={{
