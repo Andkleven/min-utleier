@@ -66,6 +66,7 @@ export default function Home() {
                 fontSize: "calc(8vw + 10px)",
                 textShadow: "0px 2px 1em rgba(0, 0, 0, 0.5)",
                 position: "relative",
+                fontFamily: "Akaya Telivigala",
                 top: 5,
               }}
             >
