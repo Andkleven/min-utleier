@@ -16,7 +16,7 @@ export default function Home() {
     // add or remove refs
     setElRefs((elRefs) =>
       Array(arrLength)
-        .fill()
+        .fill(0)
         .map((_, i) => elRefs[i] || createRef())
     );
   }, [arrLength]);

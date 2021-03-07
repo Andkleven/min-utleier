@@ -11,7 +11,7 @@ export default function ImageCard({
   return (
     <Col xs={12} md={6} xl={4} className="mb-4">
       <Card style={{ height: "100%", padding: 10 }} ref={elRefs[index]}>
-        <div class="text-dark">
+        <div className="text-dark">
           <Card.Img src={carToRent.imageUrl} />
           <Card.Title
             style={{
