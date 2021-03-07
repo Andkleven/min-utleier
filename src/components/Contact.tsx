@@ -39,7 +39,7 @@ export default function Contact({ setCheckbox, checkbox, useScroll }) {
           data.leie[name] = true;
         }
       });
-      const res = await fetch(`${process.env.HOME_PAGE}/api`, {
+      const res = await fetch(`${process.env.FRONTEND_URL}/api`, {
         body: JSON.stringify(data),
         headers: {
           Accept: "application/json",
