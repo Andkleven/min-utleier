@@ -42,7 +42,12 @@ export default function Home() {
         }}
       >
         <Container>
-          <Row>
+          <Row
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+            }}
+          >
             <Col
               style={{
                 whiteSpace: "nowrap",
