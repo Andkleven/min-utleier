@@ -10,25 +10,32 @@ export default function ImageCard({
 }) {
   return (
     <Col xs={12} md={6} xl={4} className="mb-4">
-      <Card style={{ height: "100%", padding: 10 }} ref={elRefs[index]}>
-        <div className="text-dark">
-          <Card.Img src={carToRent.imageUrl} />
-          <Card.Title
-            style={{
-              textAlign: "center",
-              fontWeight: "bold",
-              fontSize: "2rem",
-            }}
-          >
-            {carToRent.title}
-          </Card.Title>
-          <Card.Subtitle style={{ marginBottom: 15, textAlign: "left" }}>
-            {carToRent.prise} kr per dag
-          </Card.Subtitle>
-          <Card.Text style={{ fontSize: "1.1rem", textAlign: "left" }}>
-            {carToRent.description}
-          </Card.Text>
-        </div>
+      <Card
+        style={{
+          height: "100%",
+          padding: 10,
+          background: "rgba(0, 0, 0, 0.8)",
+        }}
+        ref={elRefs[index]}
+      >
+        {/* <div className="text-dark"> */}
+        <Card.Img src={carToRent.imageUrl} />
+        <Card.Title
+          style={{
+            textAlign: "center",
+            fontWeight: "bold",
+            fontSize: "2rem",
+          }}
+        >
+          {carToRent.title}
+        </Card.Title>
+        <Card.Subtitle style={{ marginBottom: 15, textAlign: "left" }}>
+          {carToRent.prise} kr per dag
+        </Card.Subtitle>
+        <Card.Text style={{ fontSize: "1.1rem", textAlign: "left" }}>
+          {carToRent.description}
+        </Card.Text>
+        {/* </div> */}
         <div
           style={{
             display: "flex",

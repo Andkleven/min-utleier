@@ -46,7 +46,7 @@ export default function Home() {
         >
           <Image
             // className="not-selectable"
-            src="/construction-tight-dark.jpg"
+            src="/background.jpg"
             alt="background"
             layout="fill"
             objectFit="cover"
@@ -150,6 +150,7 @@ export default function Home() {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
+                    marginBottom: 20,
                   }}
                 >
                   <Button
