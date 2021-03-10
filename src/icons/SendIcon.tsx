@@ -10,7 +10,7 @@ export default function SendIcon() {
         stroke="currentColor"
         stroke-width="2"
         stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
         // className="feather feather-send"
       >
         <line x1="22" y1="2" x2="11" y2="13"></line>
