@@ -111,7 +111,7 @@ export default function Home() {
           }}
         >
           <Image
-            src="https://min-utleier.vercel.app/background.jpg"
+            src="/background.jpg"
             alt="background"
             layout="fill"
             objectFit="cover"
